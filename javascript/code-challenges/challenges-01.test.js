@@ -54,12 +54,11 @@ Write a function named `allUpperCase` that takes an array of strings, and return
 
 Use `forEach` to loop over the input array. The modified strings should each be added into a local array. Return that local array.
 ------------------------------------------------------------------------------------------------ */
-
-
-
-const allUpperCase = (arr) => {
-  // Solution code here...
-};
+let arr = ['a', 'b', 'c', 'd'];
+const allUpperCase = arr.map(element => {
+  return element.toUpperCase();
+});
+console.log(allUpperCase);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -71,12 +70,29 @@ Then, write a function named `speaker` that takes in an array of strings and a c
 Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array.
 ------------------------------------------------------------------------------------------------ */
 
-const greeting = (word) => {
-  // Solution code here...
-};
+let arr = ['hello'];
+const greeting = arr.map(element => {
+  return element.toUpperCase();
+});
+console.log(greeting);
+
+
+
+
+let arr = ['appointment', 'basket', 'carpet', 'doc'];
+let newArr = [];
+
+arr.forEach((num) => {
+  newArr.push('apple', 'bat', 'cat', 'dog');
+});
+console.log(newArr);
 
 const speaker = (words, callback) => {
   // Solution code here...
+};
+
+function speaker('appointment', 'basket', 'carpet', 'doc'){
+  newArr.push()
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -94,6 +110,14 @@ Within the addNumbers function, invoke the callback function as many times as ne
 
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
+let arr = ['appointment', 'basket', 'carpet', 'doc'];
+let newArr = [];
+
+arr.forEach((num) => {
+  newArr.push('apple', 'bat', 'cat', 'dog');
+});
+console.log(newArr);
+
 
 const addValues = (arr, value) => {
   // Solution code here...
