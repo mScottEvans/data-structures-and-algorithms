@@ -7,8 +7,6 @@ Write a function named `addOne` that takes an array of numbers, and returns a ne
 
 Use `forEach` to loop over the input array and work with each value.  Push the new value into a local array. Return the local array;
 ------------------------------------------------------------------------------------------------ */
-let arr = [1, 2, 3, 4];
-let newArr = [];
 
 
 
@@ -21,16 +19,14 @@ let newArr = [];
 
 
 
-arr.forEach((num) => {
-  newArr.push(num +1);
-});
-console.log(newArr);
 
 
-
-const addOne = (arr.forEach((num)) => {
+const addOne = (num) => {
   // Solution code here...
-  newArr.push(num + 1);
+    let newArr = [];
+  arr.forEach((num)) => {
+    newArr.push(num + 1)
+  }
 };
 console.log(addOne);
 /* ------------------------------------------------------------------------------------------------
@@ -40,16 +36,16 @@ Write a function named `addExclamation` that takes an array of strings, and retu
 
 Use `forEach` to loop over the input array. Modify each string, and add the updated value into a local array. Return the local array;
 ------------------------------------------------------------------------------------------------ */
-let a = ['a','b','c','d'];
-let newArr = [];
 
-arr.forEach((num) => {
-  newArr.push(`${arr}!`);
-});
-console.log(newArr);
 
 const addExclamation = (arr) => {
   // Solution code here...
+  let a = ['a','b','c','d'];
+  let newArr = [];
+  arr.forEach((num) => {
+    newArr.push(`${arr}!`);
+  });
+  console.log(newArr);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -59,11 +55,11 @@ Write a function named `allUpperCase` that takes an array of strings, and return
 
 Use `forEach` to loop over the input array. The modified strings should each be added into a local array. Return that local array.
 ------------------------------------------------------------------------------------------------ */
-let arr = ['a','b','c','d'];
-let newArr = [];
 
 
 const allUpperCase = arr.map(element => {
+  let arr = ['a','b','c','d'];
+  let newArr = [];
   return element.toUpperCase();
 });
 console.log(allUpperCase);
@@ -77,33 +73,22 @@ Then, write a function named `speaker` that takes in an array of strings and a c
 
 Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array.
 ------------------------------------------------------------------------------------------------ */
-let arr = ['hello'];
-let newArr = [];
-
-
-const allUpperCase = arr.map(element => {
-  return element.toUpperCase();
-});
-console.log(allUpperCase);
 
 
 const greeting = (word) => {
   // Solution code here...
+  return word.toUpperCase() + '!';
 };
-
 
 
 const speaker = (words, callback) => {
   // Solution code here...
+  let newArr = [];
+  words.forEach(element => {
+    newArr.push(callback(element));
+  });
+  return newArr;
 };
-
-let arr = ['apple', 'banana','cantelope', 'dragonFruit'];
-let newArr = [];
-
-arr.forEach((num) => {
-  newArr.push('a','b','c','d');
-});
-console.log(newArr);
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -121,17 +106,17 @@ Within the addNumbers function, invoke the callback function as many times as ne
 
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
-let arr = [1, 2, 3, 4];
-let newArr = [];
 
-arr.forEach((num) => {
-  newArr.push('5','6','7','8');
-});
 
 
 const addValues = forEach((arr, value) => {
   // Solution code here...
-  return element.toUpperCase();
+  let arr = [1, 2, 3, 4];
+  let newArr = [];
+  arr.forEach((num) => {
+    newArr.push('2','4','6','8');
+  });
+
 });
 
 const addNumbers = (num, arr, times, callback) => {
@@ -155,18 +140,18 @@ The inventory is formatted like this:
 
 This function should use forEach to populate your grocery list based on the store's inventory. If the item is available, add it to your list. Return the final list.
 ------------------------------------------------------------------------------------------------ */
-let storeList = ['apples','pears','oranges','bananas','blueberries'];
-let newStoreList = [];
-
-storeList.forEach((num) => {
-  newStoreList.push(num + '');
-});
-console.log(newStoreList);
 
 
 
 const createList = (availableItems) => {
   // Solution code here...
+  let storeList = ['apples','pears','oranges','bananas','blueberries'];
+  let newStoreList = [];
+
+  storeList.forEach((num) => {
+    newStoreList.push(num + '');
+  });
+  console.log(newStoreList);
 };
 
 /* ------------------------------------------------------------------------------------------------
