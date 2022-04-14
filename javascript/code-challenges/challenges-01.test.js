@@ -10,7 +10,13 @@ Use `forEach` to loop over the input array and work with each value.  Push the n
 
 const addOne = (arr) => {
   // Solution code here...
+  let newArr = [];
+  arr.forEach((num) => {
+    newArr.push(num + 1)
+  })
+  return newArr;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -20,8 +26,13 @@ Write a function named `addExclamation` that takes an array of strings, and retu
 Use `forEach` to loop over the input array. Modify each string, and add the updated value into a local array. Return the local array;
 ------------------------------------------------------------------------------------------------ */
 
-const addExclamation = (arr) => {
+const addExclamation = (arr) =>{
   // Solution code here...
+  let newArr = [];
+  arr.forEach((str) => {
+    newArr.push(str + '!');
+  })
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -32,8 +43,12 @@ Write a function named `allUpperCase` that takes an array of strings, and return
 Use `forEach` to loop over the input array. The modified strings should each be added into a local array. Return that local array.
 ------------------------------------------------------------------------------------------------ */
 
-const allUpperCase = (arr) => {
-  // Solution code here...
+const allUpperCase = (arr) =>{
+  let newArr = [];
+  arr.forEach(str => {
+    newArr.push(str.toUpperCase())
+  })
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -41,17 +56,24 @@ CHALLENGE 4
 
 Write a function named `greeting` that takes in a single string and returns the string in all uppercase letters, and followed by an "!".
 
-Then, write a function named `speaker` that takes in an array of strings and a callback function. 
+Then, write a function named `speaker` that takes in an array of strings and a callback function.
 
-Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array. 
+Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array.
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
   // Solution code here...
+  return word.toUpperCase() + '!';
 };
+
 
 const speaker = (words, callback) => {
   // Solution code here...
+  let newArr = [];
+  words.forEach(element => {
+    newArr.push(callback(element));
+  });
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -69,15 +91,29 @@ Within the addNumbers function, invoke the callback function as many times as ne
 
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
+// expect(addNumbers(8, [], 5, addValues)).toStrictEqual([8, 8, 8, 8, 8]);
+
+
 
 const addValues = (arr, value) => {
   // Solution code here...
+  arr.push(value);
 };
+
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
-};
+  // let newArr = [];
+  // num.forEach(element => {
+  //   newArr.push(callback(element));
+  // });
+  // return newArr;
 
+  for (let i = 0; i < times; i++){
+    callback(arr, num)
+  }
+  return arr;
+};
 /* ------------------------------------------------------------------------------------------------
 
 CHALLENGE 6
@@ -98,6 +134,18 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   // Solution code here...
+
+  let newStoreList = [];
+
+  availableItems.forEach( items => {
+    // newStoreList.push();
+    // console.log(items.available);
+    if (items.available) {
+      newStoreList.push(items.name);
+    }
+  });
+  return newStoreList;
+  // console.log(newStoreList);
 };
 
 /* ------------------------------------------------------------------------------------------------
