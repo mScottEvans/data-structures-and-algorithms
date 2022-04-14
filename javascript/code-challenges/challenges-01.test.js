@@ -139,7 +139,7 @@ const createList = (availableItems) => {
 
   availableItems.forEach( items => {
     // newStoreList.push();
-    console.log(items.available);
+    // console.log(items.available);
     if (items.available) {
       newStoreList.push(items.name);
     }
