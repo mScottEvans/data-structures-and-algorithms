@@ -8,14 +8,15 @@ Write a function named `addOne` that takes an array of numbers, and returns a ne
 Use `forEach` to loop over the input array and work with each value.  Push the new value into a local array. Return the local array;
 ------------------------------------------------------------------------------------------------ */
 
-const addOne = (num) => {
+const addOne = (arr) => {
   // Solution code here...
-    let newArr = [];
-  arr.forEach((num)) => {
+  let newArr = [];
+  arr.forEach((num) => {
     newArr.push(num + 1)
-  }
+  })
+  return newArr;
 };
-console.log(addOne);
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -25,14 +26,13 @@ Write a function named `addExclamation` that takes an array of strings, and retu
 Use `forEach` to loop over the input array. Modify each string, and add the updated value into a local array. Return the local array;
 ------------------------------------------------------------------------------------------------ */
 
-const addExclamation = (arr) => {
+const addExclamation = (arr) =>{
   // Solution code here...
-  let a = ['a','b','c','d'];
   let newArr = [];
-  arr.forEach((num) => {
-    newArr.push(`${arr}!`);
-  });
-  console.log(newArr);
+  arr.forEach((str) => {
+    newArr.push(str + '!');
+  })
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -43,12 +43,13 @@ Write a function named `allUpperCase` that takes an array of strings, and return
 Use `forEach` to loop over the input array. The modified strings should each be added into a local array. Return that local array.
 ------------------------------------------------------------------------------------------------ */
 
-const allUpperCase = arr.map(element => {
-  let arr = ['a','b','c','d'];
+const allUpperCase = (arr) =>{
   let newArr = [];
-  return element.toUpperCase();
-});
-console.log(allUpperCase);
+  arr.forEach(str => {
+    newArr.push(str.toUpperCase())
+  })
+  return newArr;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -91,18 +92,20 @@ Within the addNumbers function, invoke the callback function as many times as ne
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
-const addValues = forEach((arr, value) => {
+const addValues = (arr, value) => {
   // Solution code here...
-  let arr = [1, 2, 3, 4];
-  let newArr = [];
-  arr.forEach((num) => {
-    newArr.push('2','4','6','8');
-  });
+  newArr = [];
+  value.push(arr);
+};
 
-});
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
+  let newArr = [];
+  num.forEach(element => {
+    newArr.push(callback(element));
+  });
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
