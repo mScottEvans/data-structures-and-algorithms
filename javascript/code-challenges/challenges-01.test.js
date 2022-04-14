@@ -91,23 +91,29 @@ Within the addNumbers function, invoke the callback function as many times as ne
 
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
+// expect(addNumbers(8, [], 5, addValues)).toStrictEqual([8, 8, 8, 8, 8]);
+
+
 
 const addValues = (arr, value) => {
   // Solution code here...
-  newArr = [];
-  value.push(arr);
+  arr.push(value);
 };
 
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
-  let newArr = [];
-  num.forEach(element => {
-    newArr.push(callback(element));
-  });
-  return newArr;
-};
+  // let newArr = [];
+  // num.forEach(element => {
+  //   newArr.push(callback(element));
+  // });
+  // return newArr;
 
+  for (let i = 0; i < times; i++){
+    callback(arr, num)
+  }
+  return arr;
+};
 /* ------------------------------------------------------------------------------------------------
 
 CHALLENGE 6
@@ -128,13 +134,18 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   // Solution code here...
-  let storeList = ['apples','pears','oranges','bananas','blueberries'];
+
   let newStoreList = [];
 
-  storeList.forEach((num) => {
-    newStoreList.push(num + '');
+  availableItems.forEach( items => {
+    // newStoreList.push();
+    console.log(items.available);
+    if (items.available) {
+      newStoreList.push(items.name);
+    }
   });
-  console.log(newStoreList);
+  return newStoreList;
+  // console.log(newStoreList);
 };
 
 /* ------------------------------------------------------------------------------------------------
