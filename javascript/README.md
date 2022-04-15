@@ -1,3 +1,13 @@
+Number and name of feature: __________04 - Counting horns______________________
+
+Estimate of time needed to complete: __3___
+
+Start time: __6pm___
+
+Finish time: __1:40am___
+
+Actual time needed to complete: __9___
+
 # Data Structures and Algorithms
 
 ## Language: `JavaScript`
