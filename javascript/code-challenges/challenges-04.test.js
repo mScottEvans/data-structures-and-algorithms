@@ -23,11 +23,7 @@ function lower(str) {
 
 const updateAnimal = (arr, callback) => {
   // Solution code here...
-  let newArr = [];
-  num.forEach(element => {
-    newArr.push(callback(element));
-  });
-  return newArr;
+  return arr.sort((a,b) => b - a);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -40,11 +36,7 @@ For example: 'Cat' would come before 'apple'
 
 const sortNames = (arr) => {
   // Solution code here...
-  let newArr = [];
-  num.forEach(element => {
-    newArr.push(callback(element));
-  });
-  return newArr;
+  return arr.sort((a,b) => b - a);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -57,11 +49,7 @@ HINT: Beware... JS default is "Lexical" ordering.
 
 const sortNumbers = (arr) => {
   // Solution code here...
-  let newArr = [];
-  num.forEach(e => {
-    newArr.push(callback(e));
-  });
-  return newArr;
+  return arr.sort((a,b) => b - a);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -74,10 +62,7 @@ HINT: Do it with a custom sort callback, not with using `.reverse()`. ;)
 
 const sortBackwards = (arr) => {
   // Solution code here...
-  num.forEach(element => {
-    newArr.push(callback(element));
-  });
-  return newArr;
+  return arr.sort((a,b) => b - a);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -92,12 +77,7 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 
 const alphabetize = (arr) => {
   // Solution code here...
-
-  arr.forEach(e => {
-    newNum.push(callback(e));
-  });
-
-  return newArr;
+  return arr.sort();
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -115,12 +95,7 @@ Here is an example of the input:
 
 const sortByPrice = (arr) => {
   // Solution code here...
-  let newArr = [];
-  arr.forEach(e => {
-    newNum.push(callback(e));
-  });
-
-  return newArr;
+  return arr.sort((a,b) => b - a);
 };
 
 /* ------------------------------------------------------------------------------------------------
