@@ -2,6 +2,17 @@ Number and name of feature: __________04 - Counting horns______________________
 
 Estimate of time needed to complete: __3___
 
+Start time: __5:10pm___
+
+Finish time: __9:37pm___
+
+Actual time needed to complete: __5___
+
+
+Number and name of feature: __________05______________________
+
+Estimate of time needed to complete: __3___
+
 Start time: __6pm___
 
 Finish time: __1:40am___
