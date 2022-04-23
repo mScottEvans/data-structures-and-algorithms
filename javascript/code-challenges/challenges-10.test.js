@@ -8,9 +8,8 @@ Write a function named returnTen, takes in a string and uses split and splice to
 ------------------------------------------------------------------------------------------------ */
 
 function returnTen(str){
-  // Solution code here...
-  let returnTen = str.split(10);
-  return returnTen();
+  let startIdx = str.length > 10 ? str.length - 10 : 0;
+  return str.split('').splice(startIdx, str.length);
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -28,7 +27,13 @@ For example:
 return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
-  // Solution code here...
+  let maxNum = 0;
+  matrix.forEach( (outerEl) => {
+    outerEl.forEach( (innerEl) => {
+      maxNum = maxNum < innerEl ? innerEl : maxNum;
+    });
+  });
+  return maxNum;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,7 +51,13 @@ For example:
 return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
-  // Solution code here...
+  let ttlSum = 0;
+  matrix.forEach((outerEl) => {
+    outerEl.forEach((innerEl) => {
+      ttlSum = ttlSum + innerEl;
+    });
+  });
+  return ttlSum;
 };
 
 
@@ -73,8 +84,15 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  // Solution code here...
-
+  let totals = [];
+  for (let outer = 0; outer < hoursOpen.length; outer++){
+    let sum = 0;
+    for (let inner = 0; inner < stores.length; inner++){
+      sum += stores[inner][outer];
+    }
+    totals.push(sum);
+  }
+  return totals;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -88,7 +106,11 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  // Solution code here...
+  let result = [];
+  data.forEach((sale, idx) => {
+    result.push({ sales: `${sale} cookies`, time: hours[idx] });
+  });
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -113,7 +135,18 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+  let result = 0;
+  for(let errand of arr) {
+    if (errand.store === 'Pet store'){
+      for(let item of errand.items) {
+        if (item.name === 'Treats') {
+          console.log(item.name);
+          result = item.quantity;
+        }
+      }
+    }
+  }
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
