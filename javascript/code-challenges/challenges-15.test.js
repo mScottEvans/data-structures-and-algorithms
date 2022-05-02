@@ -11,9 +11,9 @@ Write a function named screenForNames that takes in an array of strings and uses
 ------------------------------------------------------------------------------------------------ */
 
 const screenForNames = (arr) => {
-  let regexFromMyArray = new RegExp(myArray.join("|"), 'gi');
-  return
-}
+  let regex = /^(Mr. |Mrs. |Mr. |Dr. |Ms. )[^ ]/gm;
+  return arr.filter(i => regex.test(i));
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -24,7 +24,13 @@ For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyv
 ------------------------------------------------------------------------------------------------ */
 
 const toTitleCase = (arr) => {
-
+  return arr.map((word) => {
+    if (word.charAt(0) === word[0].toLowerCase()) {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    } else {
+      return word;
+    }
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -99,7 +105,14 @@ let starWarsData = [{
 }];
 
 let biggerThanLuke = (arr) => {
-  // Solution code here...
+  let lukesFatButt = 77;
+  let massArr = [];
+  arr.forEach((character) => {
+    if (parseInt(character.mass) > lukesFatButt) {
+      massArr.push(character.name);
+    }
+  });
+  return massArr.join(' - ');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -117,7 +130,7 @@ This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
 const sortBy = (property, arr) => {
-  // Solution code here...
+  return arr.sort((a, b) => a[property] < b[property] ? -1 : 1).sort((a, b) => a[property] < b[property] ? +1 : 1);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -133,7 +146,8 @@ https://secure.com returns true because the URL is secure
 https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
 const isSecure = (url) => {
-  // Solution code here...
+  var reg = /^(?:https:\/\/)/gm;
+  return reg.test(url);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -156,7 +170,9 @@ Here is a sample board:
 ------------------------------------------------------------------------------------------------ */
 
 const detectTicTacToeWin = (board) => {
-  // Solution code here...
+  let helper = function helpCheck(row1, col1, row2, col2, row3, col3) {
+
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
