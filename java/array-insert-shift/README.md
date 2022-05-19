@@ -1,1 +1,1 @@
-![Getting Started](./img.jpg)
+![Array-Insert-Shift](./img/array-insert-shift.png)

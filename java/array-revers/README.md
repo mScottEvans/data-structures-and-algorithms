@@ -1,1 +1,1 @@
-![Getting Started](./img.jpg)
+![Array-Reverse](./img/array-revers.png)
