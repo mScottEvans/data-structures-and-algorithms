@@ -1,1 +1,1 @@
-![Array-Binary-Search](./array-binary-search.png)
+![Array-Binary-Search](./img/array-binary-search.png)
