@@ -1,13 +1,13 @@
+
+
 package datastructures.linkedlist;
 
-public class Node {
+public class Node<T> {
+  public T value;
+  public Node<T> next;
 
-  public int value;
-  public Node next;
-
-  public Node(int value){
+  public Node (T value) {
     this.value = value;
   }
 }
-
 
