@@ -92,6 +92,14 @@ public class LinkedList<T>
     throw new IllegalArgumentException("position " + k + " is not on the list");
   }
 
+  public LinkedList<T>  zipLists(LinkedList<T> list2){
+    Node<T> current = head;
+    Node<T> listOne = head;
+    Node<T> listTwo = list2.head;
+    while(current != null){
+      current = current.next;
+    }
+  }
 
   // Roger toString the wrong way
   @Override
