@@ -15,7 +15,7 @@ class AnimalTest {
     @Test void canAddADogToTheAnimalShelterTest() {
       AnimalShelter sut = new AnimalShelter("doggy");
       Dog myDog = new Dog("Dog");
-
+      
       assertTrue(sut.acceptAnimal(myDog));
     }
     @Test void canAddACatToTheAnimalShelterTest() {
@@ -25,9 +25,23 @@ class AnimalTest {
       assertTrue(sut.acceptAnimal(myCat));
   }
     @Test void thereIsEqualAnimalThenGetDogTest() {
-
+      AnimalShelter sut = new AnimalShelter("Shelter101");
+      Cat myCat = new Cat("Cat");
+      Dog myDog = new Dog("Dog");
+      sut.acceptAnimal(myCat);
+      sut.acceptAnimal(myDog);
+      Animal adoptedAnimal = sut.adoptAny();
+      assertEquals("Dog", adoptedAnimal.name);
   }
     @Test void thereAreMoreCatsThenDogsSoYouGetACatTest() {
-
+      AnimalShelter sut = new AnimalShelter("Shelter101");
+      Cat myCat = new Cat("Cat");
+      Cat myCat2 = new Cat("Cat2");
+      Dog myDog = new Dog("Dog");
+      sut.acceptAnimal(myCat);
+      sut.acceptAnimal(myCat2);
+      sut.acceptAnimal(myDog);
+      Animal adoptedAnimal = sut.adoptAny();
+      assertEquals("Cat", adoptedAnimal.name);
   }
 }

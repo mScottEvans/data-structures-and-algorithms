@@ -11,12 +11,12 @@ public class AnimalShelter {
     this.catQueue = new Queue();
   }
   public boolean acceptAnimal(Animal animal){
-    if(animal.getClass().getSimpleName() == "Dog") {
+    if(animal instanceof Dog) {
       if(dogQueue.enqueue(animal)){
         return true;
       };
     }
-    if(animal.getClass().getSimpleName() == "Cat"){
+    if(animal instanceof Cat){
       if(catQueue.enqueue(animal)){
         return true;
       }
